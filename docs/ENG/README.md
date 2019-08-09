@@ -1,33 +1,35 @@
-# What I did when installing Hackintosh on Dell Vostro 3267 system unit
+# What I did when installing Hackintosh on Dell OptiPlex 3060 system unit
 
 ENGLISH | [RUSSIAN](/README.md)
 
-This instruction I wrote for myself that after reinstallation not to remember as how to do. The instructions are written after installing macOS Mojave 10.14.6. to the system unit [DELL Vostro 3267](https://www.dell.com/support/manuals/vostro-3268-desktop/3268_om_pub/).
+This instruction I wrote for myself that after reinstallation not to remember as how to do. The instructions are written after installing macOS Mojave 10.14.6. to the system unit  [DELL OptiPlex 3060](https://www.dell.com/support/home/product-support/product/optiplex-3060-desktop/).
 
-## Dell Vostro 3267 system unit features
+## Dell OptiPlex 3060 system unit features
 
 * Processor
-  * Intel Core i5-6400 2.7 GHz, Turboboost 3.6 GHz, Skylake
+  * Intel Core i5-8500 3.0GHz, Turboboost 4.1GHz, Coffee Lake
 * Video card
-  * Intel HD Graphics 530
+  * Intel UHD Graphics 630
 * RAM
-  * 8 GB DDR4 2400MHz
+  * 8 GB DDR4 2666MHz
 * Motherboard
-  * Dell Vostro 3267
+  * Dell OptiPlex 3060
 * Sound adapter
-  * Realtek ALC 891
+  * Realtek ALC 255
 * Bluetooth
-  * Dell Wireless 1707 Bluetooth 4.0 LE Device  
+  * ?
 * Wifi
-  * Qualcomm QCA9565 802.11 b/g/n Wireless Adapter
+  * ?
 * Ethernet
-  * Realtek RTL8168/8111 PCI-E Gigabit Ethernet Adapter
+  * Realtek RTL8168/8111 PCI-E Gigabit Ethernet Adapter (PHY: Realtek RTL8111)
+
+In the [OtherFiles](/OtherFiles) folder there is a system report from teh AIDA64 program, but the report is not complete, because Windows was launched from an external hard disk and it did not have time to download and install all the necessary drivers
 
 ## What worked and did not work to "revive"
 
 ### What works
 
-* Intel HD Graphics 530
+* Intel UHD Graphics 630
 * Intel Quick Sync graphics acceleration
 * USB 3.0 and USB 2.0 ports
 * 3.5 mini Jack port
@@ -35,15 +37,16 @@ This instruction I wrote for myself that after reinstallation not to remember as
 
 ### What doesn't work
 
-* TurboBoost and / or SpeedStep - looking for a solution to a problem
-* Sleep - if you click on "Apple" and turn on "Sleep", then the system unit will fall asleep in a minute, and then wake up and the monitor will not wake up - I’m looking for a solution to the problem
-* D-Sub (VGA)
+* 2 monitors simultaneously (one via HDMI, the other via DisplayPort). Only 1 of the connected devices works
 * FaceTime, iMessage, HandOff, Continuity - in order to make these functions work you need wifi (and probably bluetooth, but it's not accurate). Maybe you need to buy compatible with macOS Mojave Wifi modules and replace or connect them, or you can make the existing Wifi and bluetooth modules work, but I did not want to do it, because I use the Internet via Ethernet wire
 
 ### What not verified
 
 * Wifi
 * Bluetooth
+* Turboboot
+* SpeedStep
+* USB
 * HDMI Audio
 * Drive (it is recognized in macOS and can even be opened by pressing a couple of buttons in the interface, but I don't have a DVD/CD to check the drive)
 
@@ -210,7 +213,3 @@ You can find wonderful Wallpapers on the website https://unsplash.com/
 ### Threads on the forums
 
 In these topics, I have published information about setting up and installing hackintosh for this system unit
-
-https://www.insanelymac.com/forum/topic/339843-guide-dell-vostro-3267-skylake-i5-6400-10146/
-
-https://applelife.ru/threads/sistemnyj-blok-dell-vostro-3267-skylake-i5-6400.2944306/
