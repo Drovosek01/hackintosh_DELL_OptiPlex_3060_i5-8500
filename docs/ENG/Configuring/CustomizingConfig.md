@@ -1,4 +1,4 @@
-### Setup the config file.plist
+### Setup the config.plist file
 
 Here is described how I have changed net config that goes along with Clover revision 5033.
 
@@ -17,128 +17,65 @@ Here's what I changed in my [config.plist](/EFI/CLOVER/config.plist):
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>AddHDMI</key>
+				<key>#AddHDMI</key>
+				<true/>
+				<key>#AddIMEI</key>
 				<false/>
-				<key>FixACST</key>
-				<false/>
-				<key>FixADP1</key>
-				<false/>
-				<key>FixDarwin7</key>
-				<false/>
-				<key>FixDisplay</key>
-				<false/>
-				<key>FixHDA</key>
-				<false/>
-				<key>FixLAN</key>
-				<false/>
-				<key>FixUSB</key>
+				<key>#FixDisplay</key>
+				<true/>
+				<key>#FixIntelGfx</key>
 				<false/>
 			</dict>
-			<key>Patches</key>
-			<array>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUhDMQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUgwMQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUhDMg==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUgwMg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EC0 to EC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUMwXw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-			</array>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-		</array>
 		<key>SSDT</key>
 		<dict>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
-				<false/>
+				<true/>
 				<key>PStates</key>
-				<false/>
-				<key>PluginType</key>
 				<true/>
 			</dict>
 		</dict>
-	</dict>
-	<key>Boot</key>
-	<dict>
-		<key>Arguments</key>
-		<string>darkwake=0 alcid=13 igfxframe=0x19120000</string>
 	</dict>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>NO</string>
+			<integer>13</integer>
 		</dict>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>AAPL,GfxYTile</key>
-				<data>
-				AQAAAA==
-				</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AAASGQ==
-				</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device-id</key>
-				<data>
-				EhkAAA==
-				</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
-				<key>disable-external-gpu</key>
-				<data>
-				AQAAAA==
+				BwCbPg==
 				</data>
 				<key>enable-hdmi20</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>framebuffer-con0-busid</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con0-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con0-type</key>
+				<data>
+				AAgAAA==
+				</data>
+				<key>framebuffer-con2-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con2-index</key>
+				<data>
+				/////w==
 				</data>
 				<key>framebuffer-fbmem</key>
 				<data>
@@ -152,46 +89,12 @@ Here's what I changed in my [config.plist](/EFI/CLOVER/config.plist):
 				<data>
 				AAAwAQ==
 				</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAgA==
+				</data>
 			</dict>
 		</dict>
-	</dict>
-	<key>GUI</key>
-	<dict>
-		<key>Hide</key>
-		<array>
-			<string>Preboot</string>
-			<string>Recovery</string>
-			<string>Legacy HD2</string>
-			<string>Legacy HD3</string>
-			<string>Legacy HD4</string>
-			<string>Legacy HD5</string>
-		</array>
-		<key>Language</key>
-		<string>ru:0</string>
-		<key>Mouse</key>
-		<dict>
-			<key>Enabled</key>
-			<true/>
-			<key>Mirror</key>
-			<false/>
-			<key>Speed</key>
-			<integer>8</integer>
-		</dict>
-		<key>Scan</key>
-		<dict>
-			<key>Entries</key>
-			<true/>
-			<key>Legacy</key>
-			<false/>
-			<key>Tool</key>
-			<true/>
-		</dict>
-		<key>ScreenResolution</key>
-		<string>1920x1080</string>
-		<key>Theme</key>
-		<string>Mojave</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -204,160 +107,46 @@ Here's what I changed in my [config.plist](/EFI/CLOVER/config.plist):
 			<key>NVidia</key>
 			<false/>
 		</dict>
+		<key>ig-platform-id</key>
+		<string></string>
 	</dict>
-	<key>KernelAndKextPatches</key>
+	<key>RtVariables</key>
 	<dict>
-		<key>AppleIntelCPUPM</key>
-		<true/>
-		<key>AppleRTC</key>
-		<true/>
-		<key>KernelPm</key>
-		<true/>
-		<key>KernelToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14.4 Release kernel</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AIoChMB0
-				</data>
-				<key>Replace</key>
-				<data>
-				AIoChMDr
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disable panic kext logging on 10.13 Release kernel</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				igKEwHRE
-				</data>
-				<key>MatchOS</key>
-				<string>10.13</string>
-				<key>Replace</key>
-				<data>
-				igKEwOtE
-				</data>
-			</dict>
-		</array>
-		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>USB port limit patch #1/4 10.14.x modify by DalianSky (credit ydeng)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g/sPDw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Replace</key>
-				<data>
-				g/s/Dw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB port limit patch #2/4 10.14.x modify by DalianSky (credit PMHeart)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g+MP0w==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Replace</key>
-				<data>
-				g+M/0w==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB Port limit patch #3/4 10.14.x modify by DalianSky (credit PMheart)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g/sPDw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				g/s/Dw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB Port limit patch #4/4 10.14.x modify by DalianSky (credit PMheart)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g/8PDw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				g/8/Dw==
-				</data>
-			</dict>
-		</array>
+		<key>MLB</key>
+		<string>C07WM5ZSJYVX94ADA</string>
+		<key>ROM</key>
+		<data>
+		jOxLlUG7
+		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>05/28/2019</string>
+		<string>09/17/2018</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM171.88Z.F000.B00.1905281222</string>
+		<string>MM81.88Z.F000.B00.1809171422</string>
 		<key>Board-ID</key>
-		<string>Mac-B809C3757DA9BB8D</string>
+		<string>Mac-7BA5B2DFE22DDD8C</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02632100QXGPF7A8</string>
+		<string>C07WM5ZSJYVX94ADA</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
 		<string>1.0</string>
 		<key>ChassisAssetTag</key>
-		<string>iMac-Aluminum</string>
+		<string>Mini-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>168.0.0.0.0</string>
+		<string>220.207.27.0.0</string>
 		<key>Family</key>
-		<string>iMac17,1</string>
+		<string>Mac mini</string>
 		<key>FirmwareFeatures</key>
 		<string>0xFC0FE137</string>
 		<key>FirmwareFeaturesMask</key>
@@ -369,20 +158,15 @@ Here's what I changed in my [config.plist](/EFI/CLOVER/config.plist):
 		<key>Mobile</key>
 		<false/>
 		<key>PlatformFeature</key>
-		<string>0x00</string>
+		<string>0x02</string>
 		<key>ProductName</key>
-		<string>iMac17,1</string>
+		<string>Macmini8,1</string>
 		<key>SerialNumber</key>
-		<string>C02S63ZTGG7L</string>
+		<string>C07WM5ZSJYVX</string>
 		<key>SmUUID</key>
-		<string>913BBCAF-A976-47C5-B281-2DEB763DC8B0</string>
+		<string>35E5C172-AE15-400F-B3DD-6432BBD44366</string>
 		<key>Version</key>
 		<string>1.0</string>
-	</dict>
-	<key>SystemParameters</key>
-	<dict>
-		<key>InjectKexts</key>
-		<string>Yes</string>
 	</dict>
 </dict>
 </plist>

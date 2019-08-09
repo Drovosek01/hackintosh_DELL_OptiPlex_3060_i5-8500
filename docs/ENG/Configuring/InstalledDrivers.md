@@ -19,9 +19,12 @@ Not important drivers, but their installation does not hurt (at least not hurt i
 
 - AudioDxe
 - DataHubDxe
+- PartitionDxe
+- NvmExpressDxe
 - Fat
 - Ps2MouseDxe
 - UsbKbDxe
 - UsbMouseDxe
 - VBoxExt2
 - VBoxExt4
+- VBoxIso9600

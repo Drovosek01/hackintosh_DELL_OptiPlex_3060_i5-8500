@@ -19,9 +19,12 @@
 
 - AudioDxe
 - DataHubDxe
+- PartitionDxe
+- NvmExpressDxe
 - Fat
 - Ps2MouseDxe
 - UsbKbDxe
 - UsbMouseDxe
 - VBoxExt2
 - VBoxExt4
+- VBoxIso9600
