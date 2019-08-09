@@ -198,12 +198,6 @@ Most of the programs from this list I use in my daily work. Naturally, the list 
 
 [Regular Software](/docs/RUS/ProgramsList/RegularSoftware.md)
 
-## Benchmark testing
-
-The list of tests, their description and results are presented in a separate file.
-
-[Benchmark test results](/docs/RUS/BenchmarksTesting/benchmark_testing.md)
-
 ## More
 
 ### Wallpaper
