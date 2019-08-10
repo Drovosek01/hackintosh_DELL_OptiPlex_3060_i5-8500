@@ -207,3 +207,7 @@ You can find wonderful Wallpapers on the website https://unsplash.com/
 ### Threads on the forums
 
 In these topics, I have published information about setting up and installing hackintosh for this system unit
+
+https://www.applelife.ru/threads/sistemnyj-blok-dell-optiplex-3060-coffelake-i5-8500.2944307/
+
+https://www.insanelymac.com/forum/topic/339856-guide-dell-optiplex-3060-coffelake-i5-8500-10146/

@@ -207,3 +207,7 @@ MacOSX может быть установлена на диск (без форм
 ### Темы на форумах
 
 В этих темах я опубликовал информацию о настройке и установке hackintosh для этого системного блока
+
+https://www.applelife.ru/threads/sistemnyj-blok-dell-optiplex-3060-coffelake-i5-8500.2944307/
+
+https://www.insanelymac.com/forum/topic/339856-guide-dell-optiplex-3060-coffelake-i5-8500-10146/
